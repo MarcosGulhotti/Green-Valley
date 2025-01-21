@@ -1,5 +1,6 @@
+import { Header } from "@/components/Header/Header";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Lora, Nunito } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -9,6 +10,16 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const LoraFont = Lora({
+  variable: "--font-lora",
+  subsets: ["latin"],
+});
+
+const NunitoFont = Nunito({
+  variable: "--font-nunito",
   subsets: ["latin"],
 });
 
@@ -24,7 +35,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${LoraFont.variable} ${NunitoFont.variable}`}>
+        <Header />
         {children}
       </body>
     </html>
