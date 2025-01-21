@@ -29,10 +29,15 @@ export function Header() {
   }, []);
 
   useEffect(() => {
+    const bodyStyle = document.body.style;
     if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
+      bodyStyle.overflow = 'hidden';
+      bodyStyle.position = 'fixed';
+      bodyStyle.width = '100%';
     } else {
-      document.body.style.overflow = 'auto';
+      bodyStyle.overflow = '';
+      bodyStyle.position = '';
+      bodyStyle.width = '';
     }
   }, [isMobileMenuOpen]);
 
@@ -70,17 +75,14 @@ export function Header() {
         <div className={isMobileMenuOpen ? 'bar open' : 'bar'}></div>
       </button>
 
-      {isMobileMenuOpen && (
-        <div className="mobile-menu">
-          <button className="close-menu" onClick={toggleMobileMenu}>×</button>
-          <ul>
-            <li><Link href="/">Home</Link></li>
-            <li><Link href="/about">About Us</Link></li>
-            <li><Link href="/contact">Contact</Link></li>
-            <button className="mobile-menu-button">Sign Up</button>
-          </ul>
-        </div>
-      )}
+      <div className={`mobile-menu ${isMobileMenuOpen ? 'fade-in' : 'fade-out'}`}>
+        <ul>
+          <li><Link href="/">Home</Link></li>
+          <li><Link href="/about">About Us</Link></li>
+          <li><Link href="/contact">Contact</Link></li>
+          <button className="mobile-menu-button">Sign Up</button>
+        </ul>
+      </div>
     </header>
   );
 }

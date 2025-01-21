@@ -27,6 +27,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    z-index: 1;
 }
 
 .nav-list {
@@ -64,9 +65,14 @@
 
 /* Mobile styles */
 @media (max-width: 768px) {
+    .nav-list,
     .desktop-button {
-        display: none;
-        /* Hides the button in mobile view */
+        display: none; /* Hides desktop navigation elements */
+    }
+
+    .hamburger-menu {
+        display: flex; /* Makes the button visible on mobile */
+        z-index: 1;
     }
 
     .header-container {
@@ -88,8 +94,6 @@
     }
 
     .hamburger-menu {
-        position: absolute;
-        right: 15px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -127,12 +131,28 @@
         width: 100vw;
         height: 100vh;
         background-color: var(--color-soft-beige);
-        z-index: 9999;
         padding: 1rem;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .mobile-menu.fade-in {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .mobile-menu.fade-out {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .mobile-menu img {
+        margin-top: 1rem;
     }
 
     .mobile-menu ul {
@@ -140,10 +160,14 @@
         margin: 0;
         padding: 0;
         text-align: center;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1.5rem;
     }
 
     .mobile-menu li {
-        margin: 1rem 0;
         font-size: 1.5rem;
         font-weight: bold;
         cursor: pointer;
@@ -161,7 +185,7 @@
         border-radius: 5px;
         cursor: pointer;
         font-size: 1.2rem;
-        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 
     .close-menu {
@@ -178,6 +202,10 @@
 
 /* Desktop styles */
 @media (min-width: 769px) {
+    .mobile-menu {
+        display: none;
+    }
+
     .header-container {
         flex-direction: row;
         justify-content: space-between;
