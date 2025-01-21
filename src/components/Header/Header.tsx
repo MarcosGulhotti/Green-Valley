@@ -4,6 +4,12 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import './Header.css';
 
+/**
+ * The `Header` component renders the header section of the application, 
+ * including navigation links and a mobile menu.
+ *
+ * @returns {JSX.Element} The rendered header component.
+*/
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrollingDown, setIsScrollingDown] = useState(false);
@@ -13,7 +19,7 @@ export function Header() {
     let lastScrollTop = 0;
 
     const handleScroll = () => {
-      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
       // Determine scroll direction
       setIsScrollingDown(scrollTop > lastScrollTop);
