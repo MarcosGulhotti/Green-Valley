@@ -9,7 +9,7 @@
 }
 
 .green-valley-button:hover {
-    background-color: var(--color-olive-green-light);
+    background-color: var(--color-olive-green-hover);
 }
 
 .green-valley-button:disabled {

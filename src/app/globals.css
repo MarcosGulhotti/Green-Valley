@@ -2,8 +2,9 @@
   --background: #ffffff;
   --foreground: #171717;
   --color-white: #ffffff;
+  --color-black: #000000;
   --color-olive-green: #606C38;
-  --color-olive-green-light: #B5CC82;
+  --color-olive-green-hover: #3E442B;
   --color-forest-green: #283618;
   --color-soft-beige: #FEFAE0;
   --color-golden-brown: #DDA15E;
@@ -13,8 +14,8 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ededed;
+    --foreground: #0a0a0a;
   }
 }
 

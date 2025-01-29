@@ -67,11 +67,6 @@
     font-size: 1rem;
 }
 
-.header-button:hover {
-    background-color: var(--color-soft-beige);
-    color: var(--color-olive-green);
-}
-
 /* Mobile styles */
 @media (max-width: 768px) {
     .nav-container {
