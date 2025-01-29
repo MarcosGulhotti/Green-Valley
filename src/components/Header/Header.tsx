@@ -63,7 +63,7 @@ export function Header() {
         </ul>
 
         <div className='button-container'>
-          <Button className="header-button" onClick={() => null} variant='secondary'>Sign Up</Button>
+          <Button className="header-button" onClick={() => null}>Sign Up</Button>
         </div>
       </nav>
     </header>
