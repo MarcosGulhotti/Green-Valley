@@ -1,11 +1,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-white: #ffffff;
   --color-olive-green: #606C38;
+  --color-olive-green-light: #B5CC82;
   --color-forest-green: #283618;
   --color-soft-beige: #FEFAE0;
   --color-golden-brown: #DDA15E;
   --color-burnt-orange: #BC6C25;
+  --color-disabled: #BDBDBD;
 }
 
 @media (prefers-color-scheme: light) {
