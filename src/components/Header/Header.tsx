@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { Button } from '../Button/Button';
 import './Header.css';
 
 /**
@@ -11,13 +12,20 @@ import './Header.css';
  * @returns {JSX.Element} The rendered header component.
 */
 export function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrollingDown, setIsScrollingDown] = useState(false);
   const [hasBackground, setHasBackground] = useState(false);
 
   useEffect(() => {
     let lastScrollTop = 0;
 
+    /**
+     * Handles the scroll event to determine the scroll direction and 
+     * whether the header should have a background.
+     *
+     * - Updates the `isScrollingDown` state based on the current scroll position.
+     * - Updates the `lastScrollTop` to the current scroll position.
+     * - Updates the `hasBackground` state based on whether the scroll position is at the top.
+     */
     const handleScroll = () => {
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
@@ -34,30 +42,12 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    const bodyStyle = document.body.style;
-    if (isMobileMenuOpen) {
-      bodyStyle.overflow = 'hidden';
-      bodyStyle.position = 'fixed';
-      bodyStyle.width = '100%';
-    } else {
-      bodyStyle.overflow = '';
-      bodyStyle.position = '';
-      bodyStyle.width = '';
-    }
-  }, [isMobileMenuOpen]);
-
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen((prev) => !prev);
-  };
-
   return (
     <header
-      className={`header-container ${
-        isScrollingDown ? 'hidden' : hasBackground ? 'background' : ''
-      }`}
+      className={`header-container ${isScrollingDown ? 'hidden' : hasBackground ? 'background' : ''
+        }`}
     >
-      <nav className="desktop-nav">
+      <nav className="nav-container">
         <Image
           src="/images/logo.png"
           alt="green-valey-logo"
@@ -72,23 +62,10 @@ export function Header() {
           <li><Link href="/contact">Contact</Link></li>
         </ul>
 
-        {!isMobileMenuOpen && <button className="desktop-button">Sign Up</button>}
+        <div className='button-container'>
+          <Button className="header-button" onClick={() => null} variant='secondary'>Sign Up</Button>
+        </div>
       </nav>
-
-      <button className="hamburger-menu" onClick={toggleMobileMenu}>
-        <div className={isMobileMenuOpen ? 'bar open' : 'bar'}></div>
-        <div className={isMobileMenuOpen ? 'bar open' : 'bar'}></div>
-        <div className={isMobileMenuOpen ? 'bar open' : 'bar'}></div>
-      </button>
-
-      <div className={`mobile-menu ${isMobileMenuOpen ? 'fade-in' : 'fade-out'}`}>
-        <ul>
-          <li><Link href="/">Home</Link></li>
-          <li><Link href="/about">About Us</Link></li>
-          <li><Link href="/contact">Contact</Link></li>
-          <button className="mobile-menu-button">Sign Up</button>
-        </ul>
-      </div>
     </header>
   );
 }
