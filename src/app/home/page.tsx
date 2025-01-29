@@ -21,18 +21,18 @@ export default function HomePage() {
                 <h1 className="info-cards-title">Why Choose Green Valley?</h1>
                 <div className="info-cards-container">
                     <Card
-                        image={"/images/info-cards/image-1.png"}
-                        title={"Effortless Booking"}
+                        image="/images/info-cards/image-1.png"
+                        title="Effortless Booking"
                         description="Reserve tables, picnic spots, and more in just a few clicks. Our intuitive interface makes planning your day a breeze."
                     />
                     <Card
-                        image={"/images/info-cards/image-2.png"}
-                        title={"Real-Time Updates"}
+                        image="/images/info-cards/image-2.png"
+                        title="Real-Time Updates"
                         description="View live availability and choose the perfect spot for your visit. No surprises, just seamless planning."
                     />
                     <Card
-                        image={"/images/info-cards/image-3.png"}
-                        title={"Customizable Options"}
+                        image="/images/info-cards/image-3.png"
+                        title="Customizable Options"
                         description="Personalize your park experience by selecting spots that meet your preferences. Flexibility at its best."
                     />
                 </div>
