@@ -1,11 +1,6 @@
 import Image from "next/image";
+import type { CardProps } from "./@types";
 import './Card.css';
-
-type CardProps = {
-    title: string;
-    description: string;
-    image: string;
-} & React.HTMLAttributes<HTMLDivElement>;
 
 export function Card({ title, description, image, ...rest }: CardProps) {
     return (

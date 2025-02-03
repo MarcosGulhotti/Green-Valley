@@ -1,12 +1,5 @@
+import type { ButtonProps } from './@types';
 import './Button.css';
-
-type ButtonProps = {
-    children: React.ReactNode;
-    type?: 'button' | 'submit' | 'reset';
-    variant?: 'primary' | 'secondary';
-    disabled?: boolean;
-    size?: 'small' | 'medium' | 'large';
-} & React.HTMLAttributes<HTMLButtonElement>;
 
 /**
  * The `Button` component renders a button element with custom styling.

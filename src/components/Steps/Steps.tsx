@@ -1,14 +1,7 @@
 import Image from 'next/image';
+import type { StepsProps } from './@types';
 import './Steps.css';
 
-type Step = {
-    title: string;
-    description: string;
-    image: string;
-}
-type StepsProps = {
-    steps: Step[];
-}
 /**
  * Renders a list of steps with their respective titles, descriptions, and images.
  *
