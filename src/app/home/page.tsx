@@ -38,13 +38,13 @@ export default function HomePage() {
                         description="Personalize your park experience by selecting spots that meet your preferences. Flexibility at its best."
                     />
                 </div>
-                <Button variant="secondary" style={{ alignSelf: 'center' }}>Get Started</Button>
+                <Button size="large" variant="secondary" style={{ alignSelf: 'center', marginTop: 20 }}>Get Started</Button>
             </section>
 
             <section className="visit-section">
                 <h1 className="visit-section-title">Plan Your Visit in 3 Easy Steps</h1>
                 <Steps steps={steps} />
-
+                <Button size="large" variant="secondary" style={{ alignSelf: 'center', marginTop: 20 }}>Start Planning Now</Button>
             </section>
         </div>
     );

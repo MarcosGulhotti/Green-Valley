@@ -5,6 +5,7 @@ type ButtonProps = {
     type?: 'button' | 'submit' | 'reset';
     variant?: 'primary' | 'secondary';
     disabled?: boolean;
+    size?: 'small' | 'medium' | 'large';
 } & React.HTMLAttributes<HTMLButtonElement>;
 
 /**
@@ -13,9 +14,9 @@ type ButtonProps = {
  * @param {ButtonProps} props - The component props.
  * @returns {JSX.Element} The rendered button element.
  */
-export function Button({ children, type = 'button', disabled = false, variant = 'primary', ...rest }: ButtonProps) {
+export function Button({ children, type = 'button', disabled = false, variant = 'primary', size = "medium", ...rest }: ButtonProps) {
     return (
-        <button className={`green-valley-button ${variant}`} type={type} disabled={disabled} {...rest}>
+        <button className={`green-valley-button ${variant} ${size}`} type={type} disabled={disabled} {...rest}>
             {children}
         </button>
     );
