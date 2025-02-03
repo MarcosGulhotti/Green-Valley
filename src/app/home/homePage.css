@@ -66,6 +66,27 @@
     padding: 20px;
 }
 
+.visit-section {
+    margin-top: 20px;
+    width: 100%;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-forest-green);
+}
+
+.visit-section-title {
+    font-family: var(--font-lora);
+    font-size: 2rem;
+    color: var(--color-soft-beige);
+    margin-bottom: 20px;
+    font-weight: lighter;
+    align-self: center;
+    text-align: center;
+}
+
 @media (min-width: 768px) {
     .hero-text {
         max-width: 70%;

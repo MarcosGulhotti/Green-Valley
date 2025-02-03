@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Browse the Map",
+        "description": "Explore our interactive park map to find available tables, spots, and amenities. See what's open in real time.",
+        "image": "/images/steps/map.png"
+    },
+    {
+        "title": "Select & Customize",
+        "description": "Choose your preferred spot, date, and time. Add details like group size or special requests to personalize your experience.",
+        "image": "/images/steps/sign.png"
+    },
+    {
+        "title": "Confirm & Relax",
+        "description": "Complete your reservation in just a click. Your spot is secured, so you can sit back and enjoy the day stress-free.",
+        "image": "/images/steps/table.png"
+    }
+]

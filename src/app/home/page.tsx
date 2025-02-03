@@ -1,11 +1,12 @@
 import { Button } from "@/components/Button/Button";
 import { Card } from "@/components/Card/Card";
+import { Steps } from "@/components/Steps/Steps";
 import "./homePage.css";
+import steps from './mocks/steps.json';
 
 export default function HomePage() {
     return (
         <div>
-
             <section className="hero-container">
                 <div className="hero-text">
                     <h1>Reserve Your Spot in Nature</h1>
@@ -17,7 +18,8 @@ export default function HomePage() {
                     <Button variant="secondary">Reserve Now</Button>
                 </div>
             </section>
-            <div className="info-cards-section">
+
+            <section className="info-cards-section">
                 <h1 className="info-cards-title">Why Choose Green Valley?</h1>
                 <div className="info-cards-container">
                     <Card
@@ -37,7 +39,13 @@ export default function HomePage() {
                     />
                 </div>
                 <Button variant="secondary" style={{ alignSelf: 'center' }}>Get Started</Button>
-            </div>
+            </section>
+
+            <section className="visit-section">
+                <h1 className="visit-section-title">Plan Your Visit in 3 Easy Steps</h1>
+                <Steps steps={steps} />
+
+            </section>
         </div>
     );
 }
