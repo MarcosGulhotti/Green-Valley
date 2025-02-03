@@ -40,7 +40,7 @@
     align-items: center;
     position: relative;
 
-    height: 400px;
+    height: 300px;
 }
 
 @media (min-width: 768px) {
