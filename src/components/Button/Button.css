@@ -20,6 +20,7 @@
     cursor: not-allowed;
 }
 
+/* Theme variants */
 .green-valley-button.secondary {
     background-color: var(--color-golden-brown);
     color: var(--color-white);

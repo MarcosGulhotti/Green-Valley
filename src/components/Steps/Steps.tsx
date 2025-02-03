@@ -34,7 +34,7 @@ export function Steps({ steps }: StepsProps) {
                         src={step.image}
                         alt={step.title}
                         fill
-                        style={{ objectFit: 'contain', padding: '1rem' }}
+                        style={{ objectFit: 'contain', padding: '2rem' }}
                     />
                 </div>
             </div>
