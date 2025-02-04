@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Maria S.",
+        "comment": "Green Valley made my family picnic stress-free! Finding and reserving a table was so easy.",
+        "location": "California",
+        "avatar": "/images/avatars/avatar-1.png",
+        "rating": 5
+    },
+    {
+        "name": "John D.",
+        "comment": "A great experience! The reservation process was smooth, and the spot was perfect for our reunion.",
+        "location": "Texas",
+        "avatar": "/images/avatars/avatar-1.png",
+        "rating": 4
+    },
+    {
+        "name": "Emily R.",
+        "comment": "Green Valley offers a seamless booking system. I loved how organized everything was!",
+        "location": "New York",
+        "avatar": "/images/avatars/avatar-1.png",
+        "rating": 5
+    },
+    {
+        "name": "Mark T.",
+        "comment": "Reserving a table for our event was quick and hassle-free. Highly recommend!",
+        "location": "Florida",
+        "avatar": "/images/avatars/avatar-1.png",
+        "rating": 4
+    },
+    {
+        "name": "Sophia K.",
+        "comment": "The platform is easy to use, and the team is very responsive. Great job, Green Valley!",
+        "location": "Washington",
+        "avatar": "/images/avatars/avatar-1.png",
+        "rating": 5
+    }
+]

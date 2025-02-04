@@ -10,6 +10,7 @@
   --color-golden-brown: #DDA15E;
   --color-burnt-orange: #BC6C25;
   --color-disabled: #BDBDBD;
+  --color-sunset-orange: #F8B84E;
 }
 
 @media (prefers-color-scheme: light) {
@@ -42,6 +43,10 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: var(--color-black) !important;
 }
 
 @media (prefers-color-scheme: light) {
